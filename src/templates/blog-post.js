@@ -30,13 +30,11 @@ class BlogPostTemplate extends React.Component {
           {post.frontmatter.date}
         </p>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
-        <hr
-          style={{
+        <hr style={{
             marginBottom: rhythm(1),
           }}
         />
         <Bio />
-
         <ul
           style={{
             display: `flex`,
@@ -83,7 +81,6 @@ export const pageQuery = graphql`
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")
-        description
       }
     }
   }

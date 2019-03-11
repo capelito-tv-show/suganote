@@ -1,11 +1,12 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Blog`,
-    author: `Kyle Mathews`,
-    description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
+    title: `Suganote`,
+    author: `Masaki Sugano`,
+    description: `Do whatever do intensily`,
+    siteUrl: `https://suganote.com/`,
     social: {
-      twitter: `kylemathews`,
+      twitter: `sgnmski`,
+      instagram: `capelitogdk`,
     },
   },
   plugins: [
@@ -19,8 +20,8 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/content/assets`,
-        name: `assets`,
+        path: `${__dirname}/content/reading`,
+        name: `reading`,
       },
     },
     {
@@ -57,13 +58,27 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Starter Blog`,
-        short_name: `GatsbyJS`,
+        name: `suganote`,
+        short_name: `suganote`,
         start_url: `/`,
         background_color: `#ffffff`,
-        theme_color: `#663399`,
+        theme_color: `#333333`,
         display: `minimal-ui`,
         icon: `content/assets/gatsby-icon.png`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/content/assets`,
+        name: `assets`,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-styled-components`,
+      options: {
+        displayName: false,
+        pure: true
       },
     },
     `gatsby-plugin-offline`,
@@ -74,5 +89,14 @@ module.exports = {
         pathToConfigModule: `src/utils/typography`,
       },
     },
-  ],
+    `gatsby-plugin-web-font-loader`,
+    {
+      resolve: `gatsby-plugin-web-font-loader`,
+      options: {
+        google: {
+          families: [`Noto Sans JP`, `Droid Serif`]
+        }
+      }
+    }
+  ]
 }

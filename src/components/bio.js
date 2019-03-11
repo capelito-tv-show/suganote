@@ -31,11 +31,12 @@ function Bio() {
               }}
             />
             <p>
-              Written by <strong>{author}</strong> who lives and works in San
-              Francisco building useful things.
-              {` `}
+              No matter what people tell you, words and ideas can change
+              the world. {` `}
+              {/* <strong>{author}</strong> */}
+              Personal blog by{` `}
               <a href={`https://twitter.com/${social.twitter}`}>
-                You should follow him on Twitter
+                Masaki Sugano
               </a>
             </p>
           </div>
@@ -47,7 +48,7 @@ function Bio() {
 
 const bioQuery = graphql`
   query BioQuery {
-    avatar: file(absolutePath: { regex: "/profile-pic.jpg/" }) {
+    avatar: file(absolutePath: { regex: "/selfie.jpg/" }) {
       childImageSharp {
         fixed(width: 50, height: 50) {
           ...GatsbyImageSharpFixed
