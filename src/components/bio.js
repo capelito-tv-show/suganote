@@ -31,9 +31,7 @@ function Bio() {
               }}
             />
             <p>
-              No matter what people tell you, words and ideas can change
-              the world. {` `}
-              {/* <strong>{author}</strong> */}
+              Twitterをよく更新しています。{` `}<br></br>
               Personal blog by{` `}
               <a href={`https://twitter.com/${social.twitter}`}>
                 Masaki Sugano

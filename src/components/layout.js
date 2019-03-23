@@ -25,7 +25,7 @@ class Layout extends React.Component {
                 <main>{children}</main>
                 <footer>
                   © {new Date().getFullYear()}
-                  {` `}
+                {` `}
                   <a href="https://twitter.com/@sgnmski">@sgnmski</a>
                 </footer>
             </div>

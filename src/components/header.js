@@ -25,10 +25,10 @@ export const header = title => (
                     >
                         {title}
                     </Link>
+                    <button className="dark-switcher" onClick={theme.toggleDark}>
+                        {theme.dark ? <span>☀</span> : <span>☾</span>}
+                    </button>
                 </h1>
-                <button className="dark-switcher" onClick={theme.toggleDark}>
-                    {theme.dark ? <span>☀</span> : <span>☾</span>}
-                </button>
             </>
         )}
     </ThemeContext.Consumer>
