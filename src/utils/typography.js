@@ -3,6 +3,9 @@ import Wordpress2016 from "typography-theme-wordpress-2016"
 
 Wordpress2016.overrideThemeStyles = () => {
   return {
+    "html": {
+      fontFamily: `Noto Sans JP, Muli`,
+    },
     "a.gatsby-resp-image-link": {
       boxShadow: `none`,
     },
@@ -11,7 +14,6 @@ Wordpress2016.overrideThemeStyles = () => {
       fontSize: `24px`
     },
     "h2": {
-      fontFamily: `Noto Sans JP, Muli`,
       fontSize: `22px`,
       fontWeight: `lighter`
     },

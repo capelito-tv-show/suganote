@@ -1,0 +1,38 @@
+/* Dark mode styles */
+.dark-switcher {
+  color: #ffff00;
+  margin-top: 5px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+@media (min-width: 992px) {
+  .dark-switcher {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+  }
+}
+
+.dark {
+  background-color: #2a2b2d;
+  color: #fff;
+  transition: all 0.6s ease;
+}
+
+.light {
+  transition: all 0.6s ease;
+  background-color: #fefefe;
+  color: #333333;
+}
+
+.dark p,h1,h2,h3,a,
+.dark a:visited {
+  color: #fff;
+}
+
+.light p,h1,h2,h3,a,
+.light a:visited {
+  color: #333333;
+}

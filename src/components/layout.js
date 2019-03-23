@@ -1,75 +1,41 @@
 import React from "react"
-import { Link } from "gatsby"
 
 import { rhythm, scale } from "../utils/typography"
+import ThemeContext from "../context/themeContext";
+import { header } from "../components/header"
+
+import "../utils/styles.css"
 
 class Layout extends React.Component {
   render() {
-    const { location, title, children } = this.props
-    const rootPath = `${__PATH_PREFIX__}/`
-    let header
-
-    if (location.pathname === rootPath) {
-      header = (
-        <h1
-          style={{
-            // ...scale(1),
-            marginBottom: rhythm(1.5),
-            marginTop: 0,
-          }}
-        >
-          <Link
-            style={{
-              boxShadow: `none`,
-              textDecoration: `none`,
-              color: `inherit`,
-            }}
-            to={`/`}
-          >
-            {title}
-          </Link>
-        </h1>
-      )
-    } else {
-      header = (
-        <h1
-          style={{
-            fontFamily: `Muli, sans-serif`,
-            marginTop: 0,
-          }}
-        >
-          <Link
-            style={{
-              boxShadow: `none`,
-              textDecoration: `none`,
-              color: `inherit`,
-            }}
-            to={`/`}
-          >
-            {title}
-          </Link>
-        </h1>
-      )
-    }
-    return (
-      <div
-        style={{
-          marginLeft: `auto`,
-          marginRight: `auto`,
-          maxWidth: rhythm(24),
-          padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
-        }}
-      >
-        <header>{header}</header>
-        <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}
-          {` `}
-          <a href="https://twitter.com/@sgnmski">@sgnmski</a>
-        </footer>
-      </div>
+    const { title, children } = this.props
+    const Wrapper = () => (
+      <ThemeContext.Consumer>
+        {theme => (
+          <div className={theme.dark ? "dark" : "light"} >
+            <div
+              style={{
+                marginLeft: `auto`,
+                marginRight: `auto`,
+                maxWidth: rhythm(24),
+                padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
+              }}
+            >
+                <header>{header(title)}</header>
+                <main>{children}</main>
+                <footer>
+                  © {new Date().getFullYear()}
+                  {` `}
+                  <a href="https://twitter.com/@sgnmski">@sgnmski</a>
+                </footer>
+            </div>
+          </div>
+        )}
+      </ThemeContext.Consumer>
     )
-  }
+    return (
+     <Wrapper />
+    )}
 }
 
 export default Layout
