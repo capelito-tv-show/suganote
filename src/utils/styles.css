@@ -1,6 +1,5 @@
 /* Dark mode styles */
 .dark-switcher {
-  color: #ffff00;
   font-size: 27px;
   margin-top: 5px;
   background: transparent;
@@ -11,6 +10,12 @@
   top: 35px;
 }
 
+.dark .dark-switcher {
+  color: #ffff00;
+}
+.light .dark-switcher {
+  color: #333333;
+}
 @media (min-width: 992px) {
   .dark-switcher {
     position: absolute;
