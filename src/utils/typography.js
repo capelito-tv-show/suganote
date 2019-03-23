@@ -23,6 +23,9 @@ Wordpress2016.overrideThemeStyles = () => {
     },
     "body": {
       fontFamily: `Noto Sans JP, Muli`
+    },
+    "blockquote": {
+      fontSize: `14px`,
     }
   }
 }

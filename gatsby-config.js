@@ -57,7 +57,7 @@ module.exports = {
         background_color: `#ffffff`,
         theme_color: `#333333`,
         display: `minimal-ui`,
-        icon: `content/assets/gatsby-icon.png`,
+        icon: `content/assets/cat_selfie.jpg`,
       },
     },
     {
@@ -71,7 +71,7 @@ module.exports = {
       resolve: `gatsby-plugin-styled-components`,
       options: {
         displayName: false,
-        pure: true
+        pure: true,
       },
     },
     `gatsby-plugin-offline`,
@@ -87,9 +87,9 @@ module.exports = {
       resolve: `gatsby-plugin-web-font-loader`,
       options: {
         google: {
-          families: [`Noto Sans JP`, `Droid Serif`]
-        }
-      }
-    }
-  ]
+          families: [`Noto Sans JP`, `Muli`],
+        },
+      },
+    },
+  ],
 }

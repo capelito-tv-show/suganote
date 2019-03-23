@@ -7,6 +7,7 @@ import {ThemeProvider} from "../context/themeContext"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { rhythm } from "../utils/typography"
+import { inherits } from "util";
 
 class BlogIndex extends React.Component {
   render() {
@@ -18,8 +19,8 @@ class BlogIndex extends React.Component {
       <ThemeProvider>
         <Layout location={this.props.location} title={siteTitle}>
           <SEO
-            title="All posts"
-            keywords={[`blog`, `gatsby`, `javascript`, `react`]}
+            title="すべての投稿"
+            keywords={[`blog`, `suganote`, `javascript`, `react`]}
           />
           <Bio />
           {posts.map(({ node }) => {
@@ -29,6 +30,7 @@ class BlogIndex extends React.Component {
                 <h2
                   style={{
                     marginBottom: rhythm(1 / 4),
+                    fontFamily: `inherit`,
                   }}
                 >
                   <Link
