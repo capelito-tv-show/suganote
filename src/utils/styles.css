@@ -1,10 +1,14 @@
 /* Dark mode styles */
 .dark-switcher {
   color: #ffff00;
+  font-size: 27px;
   margin-top: 5px;
   background: transparent;
   border: none;
   cursor: pointer;
+  position: absolute;
+  right: 18px;
+  top: 35px;
 }
 
 @media (min-width: 992px) {
