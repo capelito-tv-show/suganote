@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `Suganote`,
     author: `Masaki Sugano`,
-    description: `Do whatever do intensily`,
+    description: ``,
     siteUrl: `https://suganote.com/`,
     social: {
       twitter: `sgnmski`,
