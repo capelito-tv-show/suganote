@@ -1,6 +1,6 @@
 import React from "react"
 
-import { rhythm, scale } from "../utils/typography"
+import { rhythm } from "../utils/typography"
 import ThemeContext from "../context/themeContext";
 import { header } from "../components/header"
 

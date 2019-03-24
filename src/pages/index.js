@@ -7,7 +7,6 @@ import {ThemeProvider} from "../context/themeContext"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { rhythm } from "../utils/typography"
-import { inherits } from "util";
 
 class BlogIndex extends React.Component {
   render() {
@@ -42,13 +41,16 @@ class BlogIndex extends React.Component {
                     {title}
                   </Link>
                 </h2>
-                <Img
-                  fluid={node.frontmatter.thumnail.childImageSharp.fluid}
-                />
+                {node.frontmatter.thumnail != null &&
+                  <Img
+                    fluid={node.frontmatter.thumnail.childImageSharp.fluid}
+                  />
+                }
                 <small>{node.frontmatter.date}</small>
                 <p
                   dangerouslySetInnerHTML={{
-                    __html: node.frontmatter.description || node.excerpt,
+                    __html:
+                      node.frontmatter.description || node.excerpt,
                   }}
                 />
               </div>
