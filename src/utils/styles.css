@@ -1,3 +1,7 @@
+h1,h2,h3 {
+  color: inherit !important;
+}
+
 /* Dark mode styles */
 .dark-switcher {
   font-size: 27px;

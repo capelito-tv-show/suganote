@@ -21,11 +21,9 @@ class BlogPostTemplate extends React.Component {
             description={post.frontmatter.description || post.excerpt}
           />
           <h1
-            style={
-              {
-                color: `inherit`,
-              }
-            }
+            style={{
+              color: `inherit`,
+            }}
           >
             {post.frontmatter.title}
           </h1>
@@ -35,11 +33,17 @@ class BlogPostTemplate extends React.Component {
               display: `block`,
               marginBottom: rhythm(1),
               marginTop: rhythm(-1),
+              color: `inherit`,
             }}
           >
             {post.frontmatter.date}
           </p>
-          <div dangerouslySetInnerHTML={{ __html: post.html }} />
+          <div
+            dangerouslySetInnerHTML={{ __html: post.html }}
+            style={{
+              color: `inherit`,
+            }}
+          />
           <hr
             style={{
               marginBottom: rhythm(1),
