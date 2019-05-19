@@ -24,7 +24,8 @@ h1,h2,h3 {
   color: #333333;
 }
 @media (min-width: 992px) {
-  .dark-switcher {
+  .content-wrapper li, p {
+    line-height: 22px;
   }
 }
 
