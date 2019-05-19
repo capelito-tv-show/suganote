@@ -22,7 +22,7 @@ class Layout extends React.Component {
               }}
             >
                 <header>{header(title)}</header>
-                <main>{children}</main>
+                <main className="content-wrapper" >{children}</main>
                 <footer>
                   © {new Date().getFullYear()}
                 {` `}
