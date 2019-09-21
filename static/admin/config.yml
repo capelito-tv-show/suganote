@@ -4,7 +4,6 @@ backend:
   branch: master # Branch to update (optional; defaults to master)
 publish_mode: editorial_workflow
 media_folder: "images/uploads"git
-public_folder: "/img"
 collections:
   - name: "blog"
     label: "Blog"
