@@ -3,7 +3,9 @@ backend:
   repo: capelito-tv-show/suganote
   branch: master # Branch to update (optional; defaults to master)
 publish_mode: editorial_workflow
+
 media_folder: "images/uploads"git
+
 collections:
   - name: "blog"
     label: "Blog"
