@@ -10,7 +10,7 @@ function RecentPosts() {
             render={data => {
                 const posts = data.allMarkdownRemark.edges
                 return (
-                    <div 
+                    <div
                         style={{
                             marginTop: rhythm(1),
                         }}
@@ -25,16 +25,18 @@ function RecentPosts() {
                         ...scale(0.4),
                         }}
                         >
-                            最新の記事
+                            Recent Posts
                         </h2>
                         {posts.map(({ node }) => {
                             const title = node.frontmatter.title || node.fields.slug
                             return(
                                 <div key={node.fields.slug}>
+                                    <small>{node.frontmatter.date}</small>
                                     <h2
                                         style={{
                                             ...scale(0.2),
                                             marginBottom: rhythm(2 / 4),
+                                            lineHeight: `18px`,
                                             fontFamily: `inherit`,
                                         }}
                                     >
@@ -48,7 +50,6 @@ function RecentPosts() {
                                             {title}
                                         </Link>
                                     </h2>
-                                    <small>{node.frontmatter.date}</small>
                                 </div>
                             )
 

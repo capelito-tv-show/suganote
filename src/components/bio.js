@@ -31,13 +31,13 @@ function Bio() {
               }}
             />
             <p>
-              Frontend Engineer / Degital Marketing{` `}<br></br>
+              Degital Marketing / Frontend Engineer{` `}<br />
               <a href={`https://twitter.com/${social.twitter}`}>
                 Twitter
-              </a><br></br>
+              </a> {` `}/{` `}
                 <a href={`https://instagram.com/${social.instagram}`}>
                   Instagram
-                </a> <br></br>
+                </a> {` `}/{` `}
               <a href={`https://www.facebook.com/profile.php?id=100009278529266`}>
                   Facebook
                 </a>

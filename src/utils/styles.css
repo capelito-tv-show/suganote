@@ -41,13 +41,13 @@ h1,h2,h3 {
   color: #333333;
 }
 
-.dark p,h1,h2,h3,a,
+.dark p,h1,h2,h3,a,hr,
 .dark a:link,
 .dark a:visited {
   color: #fff;
 }
 
-.light p,h1,h2,h3,a,
+.light p,h1,h2,h3,a,hr,
 .light a:link,
 .light a:visited {
   color: #333333;
