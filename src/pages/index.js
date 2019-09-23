@@ -2,11 +2,10 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 import Img from "gatsby-image"
 
-import Bio from "../components/bio"
 import {ThemeProvider} from "../context/themeContext"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import { rhythm } from "../utils/typography"
+import { rhythm, scale } from "../utils/typography"
 
 class BlogIndex extends React.Component {
   render() {
@@ -21,20 +20,22 @@ class BlogIndex extends React.Component {
             title="すべての投稿"
             keywords={[`blog`, `suganote`, `javascript`, `react`]}
           />
-          <Bio />
           {posts.map(({ node }) => {
             const title = node.frontmatter.title || node.fields.slug
             return (
               <div key={node.fields.slug}>
                 <h2
                   style={{
-                    marginBottom: rhythm(1 / 4),
+                    ...scale(0.2),
+                    lineHeight: "18px",
+                    marginBottom: rhythm(2 / 4),
                     fontFamily: `inherit`,
                   }}
                 >
                   <Link
                     style={{
                       boxShadow: `none`,
+                      textDecoration: `none`,
                     }}
                     to={node.fields.slug}
                   >

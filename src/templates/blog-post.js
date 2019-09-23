@@ -22,6 +22,7 @@ class BlogPostTemplate extends React.Component {
           />
           <h1
             style={{
+              ...scale(0.5),
               color: `inherit`,
             }}
           >
@@ -49,7 +50,6 @@ class BlogPostTemplate extends React.Component {
               marginBottom: rhythm(1),
             }}
           />
-          <Bio />
           <ul
             style={{
               display: `flex`,
