@@ -2,7 +2,7 @@ import React from "react"
 import { StaticQuery, graphql } from "gatsby"
 import Image from "gatsby-image"
 
-import { rhythm } from "../utils/typography"
+import { rhythm, scale } from "../utils/typography"
 
 function Bio() {
   return (
@@ -14,7 +14,7 @@ function Bio() {
           <div
             style={{
               display: `flex`,
-              marginBottom: rhythm(2.5),
+              marginBottom: rhythm(1),
             }}
           >
             <Image
@@ -31,11 +31,16 @@ function Bio() {
               }}
             />
             <p>
-              Twitterをよく更新しています。{` `}<br></br>
-              Personal blog by{` `}
+              Frontend Engineer / Degital Marketing{` `}<br></br>
               <a href={`https://twitter.com/${social.twitter}`}>
-                Masaki Sugano
-              </a>
+                Twitter
+              </a><br></br>
+                <a href={`https://instagram.com/${social.instagram}`}>
+                  Instagram
+                </a> <br></br>
+              <a href={`https://www.facebook.com/profile.php?id=100009278529266`}>
+                  Facebook
+                </a>
             </p>
           </div>
         )
@@ -58,6 +63,7 @@ const bioQuery = graphql`
         author
         social {
           twitter
+          instagram
         }
       }
     }

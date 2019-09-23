@@ -20,6 +20,19 @@ class BlogIndex extends React.Component {
             title="すべての投稿"
             keywords={[`blog`, `suganote`, `javascript`, `react`]}
           />
+          <h2
+            style={{
+              marginBottom: rhythm(2),
+            }}
+          >
+            <Link 
+              style={{
+                boxShadow: `none`,
+                textDecoration: `none`,
+              }}
+                to="/about"
+            >About</Link>
+          </h2>
           {posts.map(({ node }) => {
             const title = node.frontmatter.title || node.fields.slug
             return (

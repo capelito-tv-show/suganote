@@ -11,7 +11,7 @@ export const header = title => (
                 <h1
                     style={{
                         ...scale(1),
-                        marginBottom: rhythm(1.5),
+                        marginBottom: rhythm(0.8),
                         marginTop: 0,
                     }}
                 >

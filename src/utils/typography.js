@@ -1,36 +1,4 @@
 import Typography from "typography"
-import Wordpress2016 from "typography-theme-wordpress-2016"
-
-Wordpress2016.overrideThemeStyles = () => {
-  return {
-    "html": {
-      fontFamily: `Noto Sans JP, Muli`,
-    },
-    "a.gatsby-resp-image-link": {
-      boxShadow: `none`,
-    },
-    "h1": {
-      fontFamily: `Muli`,
-      fontSize: `24px`
-    },
-    "h2": {
-      fontSize: `22px`,
-      fontWeight: `lighter`
-    },
-    "h3": {
-      fontFamily: `Noto Sans JP, Muli`,
-      fontSize: `20px`
-    },
-    "body": {
-      fontFamily: `Noto Sans JP, Muli`
-    },
-    "blockquote": {
-      fontSize: `14px`,
-    }
-  }
-}
-
-delete Wordpress2016.googleFonts
 
 const typography = new Typography({
   headerFontFamily: [
