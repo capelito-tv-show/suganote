@@ -31,7 +31,7 @@ function Bio() {
               }}
             />
             <p>
-              Degital Marketer / Frontend Engineer{` `}<br />
+              Digital Marketer / Frontend Engineer{` `}<br />
               <a href={`https://twitter.com/${social.twitter}`}>
                 Twitter
               </a> {` `}/{` `}
