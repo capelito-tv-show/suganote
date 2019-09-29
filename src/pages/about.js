@@ -26,7 +26,7 @@ class About extends React.Component {
                         }}
                     >Work & Education</h2>
                     <ul>
-                        <li>Anker Japan (2019 ~ Now)</li>
+                        <li>Anker Japan Co., Ltd. (2019 ~ Now)</li>
                         <li>Rikkyo University (2015-2019)</li>
                         <li>Yamanashi Prefectual University (2014-2015)</li>
                     </ul>
