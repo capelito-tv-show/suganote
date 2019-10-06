@@ -41,7 +41,7 @@ class BlogIndex extends React.Component {
                   style={{
                     ...scale(0.2),
                     lineHeight: "18px",
-                    marginBottom: rhythm(2 / 4),
+                    marginBottom: rhythm(1 / 12),
                     fontFamily: `inherit`,
                   }}
                 >

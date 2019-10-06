@@ -36,7 +36,7 @@ class About extends React.Component {
                             marginBottom: rhythm(2 / 4),
                         }}
                     >Related Articles</h2>
-                    <a 
+                    <a
                     href="https://www.rikkyo.ac.jp/closeup/whyrikkyo/2018/mknpps000000kugw.html"
                     >
                         対談「社会とリーダーシップ」: グローバル社会転換期の今を生きる知恵とは？
