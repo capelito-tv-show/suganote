@@ -32,4 +32,3 @@ export const pageQuery = graphql`
       }
     }
   }
-`
