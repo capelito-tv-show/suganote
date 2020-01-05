@@ -13,13 +13,24 @@ const typography = new Typography({
     "Helvetica Neue",
   ],
   baseFontSize: [
-    `14px`,
+    `16px`,
   ],
   baseLineHeight: [
-    `20px`,
+    `30px`,
   ],
   overrideStyles: () => ({
-    a: {}
+    a: {},
+    h3: {
+      marginBottom: '0.7rem'
+    },
+    p: {
+      marginBottom: '1rem',
+    },
+    blockquote: {
+      margin: '1rem',
+      paddingLeft: '1rem',
+      borderLeft: '4px solid #fff',
+    }
   }),
 })
 if (process.env.NODE_ENV !== `production`) {
