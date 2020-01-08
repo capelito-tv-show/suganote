@@ -26,21 +26,10 @@ class About extends React.Component {
                         }}
                     >Work & Education</h2>
                     <ul>
-                        <li>Anker Japan Co., Ltd. (2019 ~ Now)</li>
+                        <li>Anker Japan Co., Ltd. (2019-Now)</li>
                         <li>Rikkyo University (2015-2019)</li>
                         <li>Yamanashi Prefectual University (2014-2015)</li>
                     </ul>
-                    <h2
-                        style={{
-                            ...scale(0.4),
-                            marginBottom: rhythm(2 / 4),
-                        }}
-                    >Related Articles</h2>
-                    <a
-                    href="https://www.rikkyo.ac.jp/closeup/whyrikkyo/2018/mknpps000000kugw.html"
-                    >
-                        対談「社会とリーダーシップ」: グローバル社会転換期の今を生きる知恵とは？
-                    </a>
                     <RecentPosts />
                 </Layout>
             </ThemeProvider>
