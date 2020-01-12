@@ -36,7 +36,18 @@ class BlogIndex extends React.Component {
           {posts.map(({ node }) => {
             const title = node.frontmatter.title || node.fields.slug
             return (
-              <div key={node.fields.slug}>
+              <div 
+                key={node.fields.slug}
+                style={{
+                  paddingBottom: `16px`
+                }}
+              >
+                <Link
+                  to={node.fields.slug}
+                  style={{
+                    textDecoration: `none`,
+                  }}
+                >
                 <h2
                   style={{
                     ...scale(0.2),
@@ -45,28 +56,29 @@ class BlogIndex extends React.Component {
                     fontFamily: `inherit`,
                   }}
                 >
-                  <Link
-                    style={{
-                      boxShadow: `none`,
-                      textDecoration: `none`,
-                    }}
-                    to={node.fields.slug}
-                  >
                     {title}
-                  </Link>
                 </h2>
                 <small>{node.frontmatter.date}</small>
                 {node.frontmatter.thumnail != null &&
                   <Img
+                    style={{
+                      maxHight: `400px`,
+                      objetFit: `cover`,
+                      objectPosition: `top`
+                    }}
                     fluid={node.frontmatter.thumnail.childImageSharp.fluid}
                   />
                 }
                 <p
+                  style={{
+                    lineHeight: `1.4rem`
+                  }}
                   dangerouslySetInnerHTML={{
                     __html:
                       node.frontmatter.description || node.excerpt,
                   }}
                 />
+                </Link>
               </div>
             )
           })}
@@ -97,7 +109,7 @@ export const pageQuery = graphql`
             title
             thumnail {
                     childImageSharp {
-                        fluid(maxWidth: 600) {
+                        fluid(maxWidth: 600,maxHeight: 300) {
                             ...GatsbyImageSharpFluid
                         }
                 }

@@ -43,6 +43,10 @@ function SEO({ description, lang, meta, keywords, title }) {
                 content: data.site.siteMetadata.author,
               },
               {
+                name: `twitter:image`,
+                content: data.site.siteMetadata.thumnail,
+              },
+              {
                 name: `twitter:title`,
                 content: title,
               },
