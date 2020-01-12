@@ -1,6 +1,5 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
-import PropTypes from "prop-types"
 import { ThemeProvider } from "../context/themeContext"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -78,10 +77,6 @@ class BlogPostTemplate extends React.Component {
       </ThemeProvider>
     )
   }
-}
-
-BlogPostTemplate.propTypes = {
-  thumnail: PropTypes.string
 }
 
 export default BlogPostTemplate
