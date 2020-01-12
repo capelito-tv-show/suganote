@@ -1,5 +1,5 @@
 ---
-title: "BookReview: 睡眠こそ最強の解決策である"
+title: "Why We Sleep 睡眠こそ最強の解決策である"
 date: "2020-01-12T12:30:03.284Z"
 thumnail: "./thumnail.jpg"
 ---
