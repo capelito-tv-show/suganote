@@ -12,7 +12,7 @@ class Layout extends React.Component {
     const Wrapper = () => (
       <ThemeContext.Consumer>
         {theme => (
-          <div className={theme.dark ? "dark" : "light"} >
+          <div className={"light"} >
             <div
               style={{
                 marginLeft: `auto`,

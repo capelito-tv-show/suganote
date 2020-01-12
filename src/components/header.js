@@ -25,9 +25,9 @@ export const header = title => (
                     >
                         {title}
                     </Link>
-                    <button className="dark-switcher" onClick={theme.toggleDark}>
+                    {/* <button className="dark-switcher" onClick={theme.toggleDark}>
                         {theme.dark ? <span>☀</span> : <span>☾</span>}
-                    </button>
+                    </button> */}
                 </h1>
 
             </>

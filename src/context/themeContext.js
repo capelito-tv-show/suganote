@@ -17,21 +17,20 @@ class ThemeProvider extends React.Component {
         dark: false,
     }
 
-    toggleDark = () => {
-        let dark = !this.state.dark
-        localStorage.setItem("dark", JSON.stringify(dark))
-        this.setState({ dark })
-    }
+    // toggleDark = () => {
+    //     let dark = !this.state.dark
+    //     localStorage.setItem("dark", JSON.stringify(dark))
+    //     this.setState({ dark })
+    // }
 
-    componentDidMount() {
-        // Getting dark mode value from localStorage!
-        const lsDark = JSON.parse(localStorage.getItem("dark"))
-        if (lsDark) {
-            this.setState({ dark: lsDark })
-        } else if (supportsDarkMode()) {
-            this.setState({ dark: true })
-        }
-    }
+    // componentDidMount() {
+    //     const lsDark = JSON.parse(localStorage.getItem("dark"))
+    //     if (lsDark) {
+    //         this.setState({ dark: lsDark })
+    //     } else if (supportsDarkMode()) {
+    //         this.setState({ dark: true })
+    //     }
+    // }
 
     render() {
         const { children } = this.props
