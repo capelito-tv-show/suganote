@@ -11,13 +11,14 @@ class BlogPostTemplate extends React.Component {
     const post = this.props.data.markdownRemark
     const siteTitle = this.props.data.site.siteMetadata.title
     const { previous, next } = this.props.pageContext
-
+    const thumnail = post.frontmatter.thumnail
     return (
       <ThemeProvider>
         <Layout location={this.props.location} title={siteTitle}>
           <SEO
             title={post.frontmatter.title}
             description={post.frontmatter.description || post.excerpt}
+            thumnail={thumnail ? thumnail.publicURL : 'nothumanail'}
           />
           <h1
             style={{
@@ -96,6 +97,9 @@ export const pageQuery = graphql`
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")
+        thumnail {
+          publicURL
+        }
       }
     }
   }
