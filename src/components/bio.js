@@ -40,7 +40,10 @@ function Bio() {
                 </a> {` `}/{` `}
               <a href={`https://www.facebook.com/profile.php?id=100009278529266`}>
                   Facebook
-                </a>
+              </a>
+              <a href={`https://www.linkedin.com/in/masaki-sugano-89a9b5196`}>
+                LinkedIn
+              </a>
             </p>
           </div>
         )
