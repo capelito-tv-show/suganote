@@ -31,19 +31,21 @@ function Bio() {
               }}
             />
             <p>
-              Digital Marketer / Frontend Engineer{` `}<br />
-              <a href={`https://twitter.com/${social.twitter}`}>
-                Twitter
-              </a> {` `}/{` `}
-                <a href={`https://instagram.com/${social.instagram}`}>
-                  Instagram
-                </a> {` `}/{` `}
-              <a href={`https://www.facebook.com/profile.php?id=100009278529266`}>
-                  Facebook
+              Digital Marketer / Frontend Engineer{` `}
+              <br />
+              <a href={`https://twitter.com/${social.twitter}`}>Twitter</a>{" "}
+              {` `}/{` `}
+              <a href={`https://instagram.com/${social.instagram}`}>
+                Instagram
+              </a>{" "}
+              {` `}/{` `}
+              <a
+                href={`https://www.facebook.com/profile.php?id=100009278529266`}
+              >
+                Facebook
               </a>
-              <a href={`https://www.linkedin.com/in/masaki-sugano-89a9b5196`}>
-                LinkedIn
-              </a>
+              {` `}/{` `}
+              <a href={`https://vsco.co/masakisugano/images`}>VSCO</a>
             </p>
           </div>
         )
