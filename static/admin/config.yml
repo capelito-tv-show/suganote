@@ -8,15 +8,13 @@ public_folder: assets
 collections:
   - name: blog
     label: Blog
-    folder: content/blog
-    slug: "{{fields.slug}}"
-    file: "content/blog/{{fields.path}}.md"
+    folder: content/blog/{{field.slug}}
+    slug: {{fields.slug}}
+    file: "content/blog/{{fields.slug}}.md"
     create: true
     fields:
-      - { name: path, label: Path }
       - { name: date, label: Date, widget: date }
       - { name: title, label: Title }
-      - {label: "Slug", name: "slug", widget: "string"}
-      - { name: description, label: Description }
+      - {label: Slug, name: slug, widget: string}
       - { name: thumnail, label: thumnail, widget: image}
       - { name: body, label: Body, widget: markdown }
