@@ -3,7 +3,7 @@ path: netlify-cms
 date: 2020-05-25T16:03:38.662Z
 title: 今更だけどブログ内にNetlify CMSを導入した。
 description: タイトルの通り
-thumnail: assets/screen-shot-2020-05-26-at-1.04.41.png
+thumnail: ./assets/screen-shot-2020-05-26-at-1.04.41.png
 ---
 タイトルの通りだが、これまでMarkdownで直書きしていたブログにCMSを導入してみた。
 
