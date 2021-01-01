@@ -30,7 +30,7 @@ const IndexPage = () => {
     let arrayOfInstaImages = _get(data, "allInstagramContent.edges")
     return (
       <ThemeProvider>
-        <Layout title="Suganote">
+      <Layout title="Suganote">
           <SEO title="すべての投稿" keywords={[`blog`, `suganote`]} />
           <h2
             style={{
