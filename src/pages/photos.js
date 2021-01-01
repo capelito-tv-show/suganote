@@ -16,7 +16,7 @@ const IndexPage = () => {
                     node {
                         localImage {
                             childImageSharp {
-                                fixed(width: 330) {
+                                fixed(width: 330, height: 330) {
                                     ...GatsbyImageSharpFixed
                                 }
                             }
