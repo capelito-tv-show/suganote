@@ -39,12 +39,6 @@ function Bio() {
                 Instagram
               </a>{" "}
               {` `}/{` `}
-              <a
-                href={`https://www.facebook.com/profile.php?id=100009278529266`}
-              >
-                Facebook
-              </a>
-              {` `}/{` `}
               <a href={`https://vsco.co/masakisugano/images`}>VSCO</a>
             </p>
           </div>

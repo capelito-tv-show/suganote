@@ -52,3 +52,7 @@ h1,h2,h3 {
 .light a:visited {
   color: #333333;
 }
+
+.gatsby-image-wrapper {
+  margin-bottom: 20px;
+}

@@ -1,3 +1,7 @@
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
 module.exports = {
   siteMetadata: {
     title: `Suganote`,
@@ -90,6 +94,14 @@ module.exports = {
         google: {
           families: [`Noto Sans JP`, `Muli`],
         },
+      },
+    },
+    `gatsby-plugin-react-helmet`,
+    {
+      resolve: `gatsby-source-instagram-all`,
+      options: {
+        access_token:
+          process.env.INSTAGRAM_TOKEN,
       },
     },
   ],
