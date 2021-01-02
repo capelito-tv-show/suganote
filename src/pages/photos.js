@@ -7,31 +7,42 @@ import { ThemeProvider } from "../context/themeContext"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { rhythm } from "../utils/typography"
+import styled from "styled-components"
+
+
+const ImageWrapper = styled.div`
+  width: 100%;
+  height: auto;
+  @media (min-width: 480px) {
+    width: 50%;
+    height: 300px;
+  }
+`
 
 const IndexPage = () => {
     const data = useStaticQuery(graphql`
-        query InstagramQuery {
-            allInstagramContent {
-                edges {
-                    node {
-                        localImage {
-                            childImageSharp {
-                                fixed(width: 330, height: 330) {
-                                    ...GatsbyImageSharpFixed
-                                }
-                            }
-                        },
-                        permalink
-                    }
+      query InstagramQuery {
+        allInstagramContent {
+          edges {
+            node {
+              localImage {
+                childImageSharp {
+                  fluid {
+                    ...GatsbyImageSharpFluid
+                  }
                 }
+              }
+              permalink
             }
+          }
         }
+      }
     `)
     let arrayOfInstaImages = _get(data, "allInstagramContent.edges")
     return (
       <ThemeProvider>
       <Layout title="Suganote">
-          <SEO title="すべての投稿" keywords={[`blog`, `suganote`]} />
+          <SEO title="Photos" keywords={[`blog`, `suganote`]} />
           <h2
             style={{
               marginBottom: rhythm(2),
@@ -60,23 +71,22 @@ const IndexPage = () => {
           <div style={{ display: "flex", flexWrap: "wrap" }}>
             {arrayOfInstaImages.map((item, i) => {
               return (
-                <div key={i} style={{ width: "330px", height: "330px" }}>
+                <ImageWrapper key={i} >
                   <a
                     href={item.node.permalink}
                     style={{ display: "block" }}
                     target="_blank"
                   >
                     <Img
-                      fixed={item.node.localImage.childImageSharp.fixed}
+                      fluid={item.node.localImage.childImageSharp.fluid}
                       imgStyle={{
+                        width: "100%",
                         objectFit: "cover",
-                        width: "330px",
-                        height: "330px",
                         padding: "8px",
                       }}
                     />
                   </a>
-                </div>
+                </ImageWrapper>
               )
             })}
           </div>
