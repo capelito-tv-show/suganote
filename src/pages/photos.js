@@ -15,7 +15,9 @@ const ImageWrapper = styled.div`
   height: auto;
   @media (min-width: 480px) {
     width: 50%;
-    height: 300px;
+    height: 330px;
+    padding: 8px;
+    overflow: hidden;
   }
 `
 
@@ -81,8 +83,7 @@ const IndexPage = () => {
                       fluid={item.node.localImage.childImageSharp.fluid}
                       imgStyle={{
                         width: "100%",
-                        objectFit: "cover",
-                        padding: "8px",
+                        objectFit: "contain",
                       }}
                     />
                   </a>
